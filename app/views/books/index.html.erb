@@ -1,6 +1,6 @@
-<h1>Bookeria</h1>
 
-<table>
+<table class="table table-striped">
+
   <tr>
     <th>Title</th>
     <th>Author</th>
@@ -14,9 +14,13 @@
       <td><%= book.author %></td>
       <td><%= book.genre %></td>
       <td><%= book.year %></td>
-      <td><%= link_to 'Show book', book %></td>
+      <td><%= link_to 'Show book', book, class: "btn btn-outline-success" %></td>
     </tr>
   <% end %>
-
 </table>
 
+<br>
+
+<%= link_to new_book_path, class: 'btn btn-success' do %>
+  <i class="fa fa-book"></i> New book
+<% end %>
